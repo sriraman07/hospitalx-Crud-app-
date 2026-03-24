@@ -1,0 +1,70 @@
+.dashboard {
+  padding: 30px;
+  background-color: #f3f4f6;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  color: #1f2937;
+}
+
+.logout-btn {
+  padding: 8px 15px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Search */
+.search {
+  margin: 20px 0;
+  padding: 10px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Form */
+.form-section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.form-section input {
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-section button {
+  padding: 10px 15px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Patient list */
+.patient-list {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Cards */
+.patient-card {
+  padding: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}

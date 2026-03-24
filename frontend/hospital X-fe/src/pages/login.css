@@ -1,0 +1,70 @@
+/* Full page */
+.register-container {
+  height: 100vh;
+  background-color: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.title {
+  margin-top: 60px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+/* Form box */
+.form-box {
+  margin-top: 40px;
+  width: 350px;
+}
+
+/* Heading */
+.form-box h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #111827;
+}
+
+/* Labels */
+.form-box label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* Inputs */
+.form-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Input focus */
+.form-box input:focus {
+  border-color: #2563eb;
+}
+
+/* Button */
+.form-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Button hover */
+.form-box button:hover {
+  background-color: #1e40af;
+}
