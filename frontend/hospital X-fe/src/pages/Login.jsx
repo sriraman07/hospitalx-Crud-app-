@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Register.css"; // 👈 reuse same CSS
+import "./login.css"; 
 import API from "../services/api";
 import { useNavigate, Link } from "react-router-dom";
 
