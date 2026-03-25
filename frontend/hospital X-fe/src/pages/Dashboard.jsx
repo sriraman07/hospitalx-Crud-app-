@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import API from "../services/api";
 import "./Dashboard.css";
 
 function Dashboard() {
+  const navigate = useNavigate();
   const [patients, setPatients] = useState([]);
   const [form, setForm] = useState({ name: "", bedId: "" });
   const [search, setSearch] = useState("");
+  const [searchInput, setSearchInput] = useState("");
 
   const fetchPatients = async () => {
     const res = await API.get("/patients");
@@ -23,6 +26,15 @@ function Dashboard() {
     fetchPatients();
   };
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
+
+  const handleSearch = () => {
+    setSearch(searchInput);
+  };
+
   const filteredPatients = patients.filter(
     (p) =>
       p.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -34,15 +46,20 @@ function Dashboard() {
       {/* Header */}
       <div className="header">
         <h1>Hospital X</h1>
-        <button className="logout-btn">Logout</button>
+        <button className="logout-btn" onClick={handleLogout}>Logout</button>
       </div>
 
       {/* Search */}
-      <input
-        className="search"
-        placeholder="Search by name or bed ID..."
-        onChange={(e) => setSearch(e.target.value)}
-      />
+      <div style={{ display: "flex", gap: "8px", margin: "16px 0" }}>
+        <input
+          className="search"
+          placeholder="Search by name or bed ID..."
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+        />
+        <button className="logout-btn" onClick={handleSearch}>Search</button>
+      </div>
 
       {/* Add Patient */}
       <div className="form-section">

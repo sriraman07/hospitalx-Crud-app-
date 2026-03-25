@@ -68,3 +68,18 @@
   padding: 15px;
   border-bottom: 1px solid #e5e7eb;
 }
+.search-row {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
